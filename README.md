@@ -1,7 +1,6 @@
-# Ecoleta
+<img height="80" src="./web/src/assets/logo.svg" align="right">
 
-O Ecoleta é um marketplace onde pessoas interessadas em descartar resíduos corretamente podem encontrar empresas interessada em receber 
-este tipo de material. Este projeto foi desenvolvido durante o Next Level Week 1.0 promovido pela [RocketSeat](https://rocketseat.com.br/).
+O <strong>Ecoleta</strong> é um <em>marketplace</em> onde pessoas interessadas em descartar resíduos corretamente podem encontrar empresas interessada em receber este tipo de material. Este projeto foi desenvolvido durante o Next Level Week 1.0 promovido pela [RocketSeat](https://rocketseat.com.br/).
 
 ## Introdução
 

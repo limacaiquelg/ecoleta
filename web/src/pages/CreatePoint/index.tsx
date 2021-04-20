@@ -1,7 +1,7 @@
 import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 import { Link, useHistory } from 'react-router-dom';
-import { Map, TileLayer, Marker } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import axios from 'axios';
 import { LeafletMouseEvent } from 'leaflet';
 import api from '../../services/api';
@@ -216,14 +216,22 @@ const CreatePoint = () => {
             <span>Selecione o endereço no mapa</span>
           </legend>
 
-          <Map center={ mapInitialPosition } zoom={ 15 } onClick={ handleMapClick } >
+          <MapContainer 
+            center={ mapInitialPosition } 
+            zoom={ 15 }
+            whenCreated = {
+              (map) => {
+                map.on("click", handleMapClick);
+              }
+            }
+          >
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
             <Marker position={ selectedMapPosition }/>
-          </Map>
+          </MapContainer>
 
           <div className="field-group">
             <div className="field">
